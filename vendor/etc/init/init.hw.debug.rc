@@ -1,0 +1,9 @@
+on property:ro.runmode=*
+    setprop persist.sys.ssr.restart_level "venus modem"
+
+service mapper /system/bin/sh /system/bin/mappersh
+    class late_start
+    user root
+    group system
+    disabled
+    seclabel u:r:mapper:s0

@@ -1,0 +1,123 @@
+
+on init
+on boot
+    chown root system /dev/hwlog_jank
+    chmod 0662 /dev/hwlog_jank
+    chmod 0660 /dev/hwlog_tag
+    chown system system /dev/hwlog_tag
+
+    chown root system /sys/class/sensors/kx126-accel
+    chown root system /sys/class/sensors/kx126-accel/enable
+    chown root system /sys/class/sensors/kx126-accel/poll_delay
+    chown root system /sys/class/sensors/kx126-accel/uevent
+    chmod 660 /sys/class/sensors/kx126-accel/uevent
+    chmod 770 /sys/class/sensors/kx126-accel/power
+    chown root system /sys/class/sensors/kx126-stepcnt
+    chown root system /sys/class/sensors/kx126-stepcnt/enable
+    chown root system /sys/class/sensors/kx126-stepcnt/poll_delay
+    chown root system /sys/class/sensors/kx126-stepcnt/uevent
+    chmod 660 /sys/class/sensors/kx126-stepcnt/uevent
+    chmod 770 /sys/class/sensors/kx126-stepcnt/power
+    chown root system /sys/class/sensors/bma4xy_acc
+    chown root system /sys/class/sensors/bma4xy_acc/enable
+    chown root system /sys/class/sensors/bma4xy_acc/poll_delay
+    chown root system /sys/class/sensors/bma4xy_acc/uevent
+    chmod 660 /sys/class/sensors/bma4xy_acc/uevent
+    chmod 770 /sys/class/sensors/bma4xy_acc/power
+    chown root system /sys/class/sensors/bma4xy_stepcnt
+    chown root system /sys/class/sensors/bma4xy_stepcnt/enable
+    chown root system /sys/class/sensors/bma4xy_stepcnt/poll_delay
+    chown root system /sys/class/sensors/bma4xy_stepcnt/uevent
+    chown root system /sys/class/sensors/bma4xy_stepcnt/flush
+    chmod 660 /sys/class/sensors/bma4xy_stepcnt/uevent
+    chmod 770 /sys/class/sensors/bma4xy_stepcnt/power
+
+    chown root system /sys/class/sensors/bma4xy_stepcnt_wakeup
+    chown root system /sys/class/sensors/bma4xy_stepcnt_wakeup/enable
+    chown root system /sys/class/sensors/bma4xy_stepcnt_wakeup/poll_delay
+    chown root system /sys/class/sensors/bma4xy_stepcnt_wakeup/uevent
+    chown root system /sys/class/sensors/bma4xy_stepcnt_wakeup/flush
+    chmod 660 /sys/class/sensors/bma4xy_stepcnt_wakeup/uevent
+    chmod 770 /sys/class/sensors/bma4xy_stepcnt_wakeup/power
+    chown root system /sys/devices/virtual/input/input1/step_counter_watermark
+
+    chown root system /sys/class/sensors/kx126-stepcnt-wakeup
+    chown root system /sys/class/sensors/kx126-stepcnt-wakeup/enable
+    chown root system /sys/class/sensors/kx126-stepcnt-wakeup/poll_delay
+    chown root system /sys/class/sensors/kx126-stepcnt-wakeup/uevent
+    chmod 660 /sys/class/sensors/kx126-stepcnt-wakeup/uevent
+    chmod 770 /sys/class/sensors/kx126-stepcnt-wakeup/power
+	
+    chown root system /sys/class/sensors/bma4xy_stationary_detect
+    chown root system /sys/class/sensors/bma4xy_stationary_detect/enable
+    chown root system /sys/class/sensors/bma4xy_stationary_detect/poll_delay
+    chown root system /sys/class/sensors/bma4xy_stationary_detect/uevent
+    chmod 660 /sys/class/sensors/bma4xy_stationary_detect/uevent
+    chmod 770 /sys/class/sensors/bma4xy_stationary_detect/power
+    chown root system /sys/class/sensors/bmi2xy_acc
+    chown root system /sys/class/sensors/bmi2xy_acc/enable
+    chown root system /sys/class/sensors/bmi2xy_acc/poll_delay
+    chown root system /sys/class/sensors/bmi2xy_acc/uevent
+    chmod 660 /sys/class/sensors/bmi2xy_acc/uevent
+    chmod 770 /sys/class/sensors/bmi2xy_acc/power
+    chown root system /sys/class/sensors/bmi2xy_stepcnt
+    chown root system /sys/class/sensors/bmi2xy_stepcnt/enable
+    chown root system /sys/class/sensors/bmi2xy_stepcnt/poll_delay
+    chown root system /sys/class/sensors/bmi2xy_stepcnt/uevent
+    chown root system /sys/class/sensors/bmi2xy_stepcnt/flush
+    chmod 660 /sys/class/sensors/bmi2xy_stepcnt/uevent
+    chmod 770 /sys/class/sensors/bmi2xy_stepcnt/power
+
+    chown root system /sys/class/sensors/bmi2xy_stepcnt_wakeup
+    chown root system /sys/class/sensors/bmi2xy_stepcnt_wakeup/enable
+    chown root system /sys/class/sensors/bmi2xy_stepcnt_wakeup/poll_delay
+    chown root system /sys/class/sensors/bmi2xy_stepcnt_wakeup/uevent
+    chown root system /sys/class/sensors/bmi2xy_stepcnt_wakeup/flush
+    chmod 660 /sys/class/sensors/bmi2xy_stepcnt_wakeup/uevent
+    chmod 770 /sys/class/sensors/bmi2xy_stepcnt_wakeup/power
+
+    chown root system /sys/class/sensors/bmi2xy_stationary_detect
+    chown root system /sys/class/sensors/bmi2xy_stationary_detect/enable
+    chown root system /sys/class/sensors/bmi2xy_stationary_detect/poll_delay
+    chown root system /sys/class/sensors/bmi2xy_stationary_detect/uevent
+    chmod 660 /sys/class/sensors/bmi2xy_stationary_detect/uevent
+    chmod 770 /sys/class/sensors/bmi2xy_stationary_detect/power
+    chown root camera /dev/dsm
+    chmod 660 /dev/dsm
+
+## Dubai daemon definition
+service dubaid /system/bin/dubaid
+    class main
+    user root
+    group system
+
+service ddrtest /vendor/bin/do_ddrtest
+    user root
+    disabled
+    oneshot
+
+service stop_ddrtest /vendor/bin/do_ddrtest
+    user root
+    disabled
+    oneshot
+
+on property:debug.rt.ddr.test=1
+    stop ddrtest
+    start ddrtest
+on property:debug.rt.ddr.test=2
+    start ddrtest
+on property:debug.rt.ddr.test=3
+    start ddrtest
+on property:debug.rt.ddr.test=4
+    start stop_ddrtest
+on property:debug.rt.ddr.test=5
+    stop ddrtest
+    start ddrtest
+on property:debug.rt.ddr.test=6
+    start ddrtest
+
+on property:sys.charger.or.discharge=1
+    write /sys/class/hw_power/charger/charge_data/enable_charger "1"
+
+on property:sys.charger.or.discharge=0
+    write /sys/class/hw_power/charger/charge_data/enable_charger "0"

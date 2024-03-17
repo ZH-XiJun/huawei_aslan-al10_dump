@@ -1,0 +1,5 @@
+## This file contains the different modes and permissions of Huawei
+#init module
+#import /init.huawei.os.rc
+#import /init.huawei.device.rc
+#import /init.huawei.wcnss.rc

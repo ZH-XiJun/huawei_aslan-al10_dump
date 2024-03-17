@@ -1,0 +1,12 @@
+on boot
+on boot
+    chown root log /dev/hwlog_exception
+    chmod 0662 /dev/hwlog_exception
+    chown root system /dev/hwlog_jank
+    chmod 0662 /dev/hwlog_jank
+    chown root system /dev/hwlog_dubai
+    chmod 0662 /dev/hwlog_dubai
+    chown root root /dev/dubai
+    chmod 0660 /dev/dubai
+
+
