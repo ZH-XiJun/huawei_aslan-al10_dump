@@ -1,0 +1,6 @@
+# thermal-daemon
+
+service thermal-daemon /system/bin/thermal-daemon
+    class main
+    user system
+    group system wakelock

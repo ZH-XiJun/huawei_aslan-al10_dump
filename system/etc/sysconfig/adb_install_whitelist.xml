@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*  ADB INSTALL WHITE LIST
+ * adb install is disabled on this device, except the apps which has signature hash in the whitelist.
+ * 
+ * ADD APK TO WHITE LIST AT USER DEBUG VERSION( user debug only )
+ * Try to adb install this apk, get the signuature hash in the err message, and add it to this xml.
+ */
+-->
+<config>
+    <!-- signature hash for all build (user & userdebug) -->
+    <hash value="-1479723719"></hash>
+    <hash value="-672009692"></hash>
+    <hash value="-159572721"></hash>
+    <hash value="275440168"></hash>
+    <hash value="1262870555"></hash>
+    <hash value="1283403218"></hash>
+
+    <hash value="-1555762431"></hash>
+    <hash value="-1365232235"></hash>
+    <hash value="-1010206528"></hash>
+    <hash value="-1304846210"></hash>
+    <hash value="-32770179"></hash>
+
+    <hash value="429587208"></hash>
+    <hash value="-585088304"></hash>
+    <hash value="-581198890"></hash>
+    <hash value="-1597669051"></hash>
+    <hash value="-1298023139"></hash>
+    <hash value="297056986"></hash>
+    <hash value="2128517457"></hash>
+    <hash value="-217139495"></hash>
+    <hash value="-527572660"></hash>
+    <hash value="-1455665038"></hash>
+    <hash value="-402407420"></hash>
+    <hash value="-613425856"></hash>
+    <hash value="-752427584"></hash>
+    <hash value="-784069511"></hash>
+
+    <!-- signature hash for userdebug build only -->
+    <hash userdebug-value="-544960092"></hash>
+    <hash userdebug-value="-1218187190"></hash>
+</config>
+

@@ -1,0 +1,30 @@
+on property:sys.boot_completed=1
+    start restart_logcat_service
+
+on data_ready
+    start logctl_service
+    start logcat_service
+    setprop sys.userdata_is_ready 1
+ 
+on property:persist.sys.huawei.debug.on=*
+    restart logcat_service
+
+service restart_logcat_service  /system/bin/sh /system/etc/logctl_service.sh
+    user root
+    group system
+    oneshot
+    seclabel u:r:logctlservice:s0
+
+service logctl_service /sbin/logctl_service -m 1
+    class late_start
+    user root
+    group system
+    oneshot
+    seclabel u:r:logctlservice:s0
+
+service logcat_service /sbin/logctl_service -m 1 -t 1
+    class late_start
+    user root
+    group system
+    oneshot
+    seclabel u:r:logctlservice:s0

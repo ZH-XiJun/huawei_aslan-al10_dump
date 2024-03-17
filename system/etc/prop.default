@@ -1,0 +1,15 @@
+#
+# ADDITIONAL_DEFAULT_PROPERTIES
+#
+ro.secure=1
+security.perf_harden=1
+ro.adb.secure=1
+ro.allow.mock.location=0
+ro.debuggable=0
+#
+# BOOTIMAGE_BUILD_PROPERTIES
+#
+ro.bootimage.build.date=Fri Dec 17 23:07:05 CST 2021
+ro.bootimage.build.date.utc=1639753625
+ro.bootimage.build.fingerprint=HUAWEI/Aslan-AL10/Aslan-AL10:8.1.0/Aslan-AL10/11.1.0.12:user/release-keys
+persist.sys.usb.config=none

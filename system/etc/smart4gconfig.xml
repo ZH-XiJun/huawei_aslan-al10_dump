@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<map>
+    <boolean name="scene_screen_on_switch" value="false"/>
+    <boolean name="scene_screen_off_switch" value="false"/>
+    <boolean name="scene_inclass_enable" value="true"/>
+    <boolean name="scene_charging_stop_app" value="true"/>
+    <boolean name="scene_statusbar_down" value="false"/>
+    <boolean name="smart_clean_enable" value="true"/>
+    <boolean name="smart4g_white_list_enable" value="false"/>
+    <boolean name="smart4g_fast_dormancy_enable" value="true"/>
+    <boolean name="charging_control_fastdormancy_enable" value="true"/>
+    <int name="sleep_clean_delay_time" value="60"/>
+    <int name="scene_screen_on_time" value="6"/>
+    <int name="scene_screen_off_time" value="300"/>
+
+    <list name="smart_clean_white_list">
+        <string>com.huawei.kidwatch.videochat</string>
+    </list>
+
+    <list name="smart4g_white_list">
+        <string>com.huawei.wearable.ota</string>
+    </list>
+    <!-- 休眠状态高温事件打点条件 -->
+    <int name="high_temperature_condition" value="360"/>
+    <!-- 休眠状态下高温事件打点条件集 -->
+    <list name="high_temperature_event_condition">
+        <int value="440" />
+        <int value="460" />
+    </list>
+    <!-- 高温事件区域分布条件集 -->
+    <list name="shell_thermal_distribution_condition">
+        <int value="340" />
+        <int value="350" />
+        <int value="360" />
+        <int value="370" />
+        <int value="380" />
+        <int value="390" />
+        <int value="400" />
+        <int value="410" />
+        <int value="420" />
+        <int value="430" />
+    </list>
+</map>

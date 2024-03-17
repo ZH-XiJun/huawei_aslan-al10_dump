@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<exceptions version="1">
+    <exception package="com.huawei.kidwatch.childguard">
+        <permission name="android.permission.CALL_PHONE" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+    </exception>
+    <exception package="com.huawei.kidwatch.contacts">
+        <permission name="android.permission.CALL_PHONE" fixed="true"/>
+        <permission name="android.permission.READ_CALL_LOG" fixed="true"/>
+        <permission name="android.permission.WRITE_CALL_LOG" fixed="true"/>
+    </exception>
+    <exception package="com.huawei.kidwatch.shakecontacts">
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="true"/>
+    </exception>
+    <exception package="com.huawei.kidwatch.alarmclock">
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+    </exception>
+    <exception package="com.huawei.kidwatch.videochat">
+        <permission name="android.permission.CALL_PHONE" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+        <permission name="android.permission.READ_CALL_LOG" fixed="true"/>
+        <permission name="android.permission.WRITE_CALL_LOG" fixed="true"/>
+        <permission name="android.permission.CAMERA" fixed="true"/>
+    </exception>
+    <exception package="com.shanbay.watch">
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="true"/>
+        <permission name="android.permission.READ_SMS" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_NUMBERS" fixed="true"/>
+        <permission name="android.permission.RECEIVE_SMS" fixed="true"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="true"/>
+    </exception>
+    <exception package="cn.kuwo.wearplayer">
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="true"/>
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+        <permission name="android.permission.CAMERA" fixed="true"/>
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="true"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="true"/>
+        <permission name="android.permission.RECORD_AUDIO" fixed="true"/>
+    </exception>
+    <exception package="com.baidu.voicesearch">
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="true"/>
+        <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="true"/>
+        <permission name="android.permission.RECORD_AUDIO" fixed="true"/>
+        <permission name="android.permission.CALL_PHONE" fixed="true"/>
+        <permission name="android.permission.READ_CONTACTS" fixed="true"/>
+    </exception>
+    <exception package="com.eg.android.AlipayGphone">
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+    </exception>
+    <exception package="cn.dictcn.android.digitize.swg_xhzd_21003">
+        <permission name="android.permission.RECORD_AUDIO" fixed="true"/>
+    </exception>
+    <exception package=" com.tencent.qqlite">
+        <permission name="android.permission.SEND_SMS" fixed="true"/>
+        <permission name="android.permission.READ_SMS" fixed="true"/>
+        <permission name="android.permission.RECEIVE_SMS" fixed="true"/>
+    </exception>
+    <exception package="com.appshare.android.ilisten.watch">
+        <permission name="android.permission.RECORD_AUDIO" fixed="true"/>
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+    </exception>
+    <exception package="com.huawei.kidwatch.smart4g">
+        <permission name="android.permission.READ_PHONE_STATE" fixed="true"/>
+        <permission name="android.permission.CALL_PHONE" fixed="true"/>
+    </exception>
+</exceptions>

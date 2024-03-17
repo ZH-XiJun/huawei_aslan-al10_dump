@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<thermal_sensor_mapping version="1.0">
+	<sensor_mapping hisi_type="22"  hisi_name="shell_temp" mapped_node="/sys/class/thermal/thermal_zone15/temp"/>
+	<sensor_mapping hisi_type="23"  hisi_name="board_2_resv" mapped_node="/sys/class/thermal/thermal_zone14/temp"/>
+</thermal_sensor_mapping>
